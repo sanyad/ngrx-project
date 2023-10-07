@@ -1,0 +1,7 @@
+<div>Counter is : {{count$ | async}}, date: {{updatedAt$ | async | date: "yyyy-MM-dd-hh:mm:ss"}}:</div>
+<div>Message:</div>
+<div>{{message$ | async}}</div>
+<hr>
+<button (click)="getData()">Get data</button>
+<div>{{(data$ | async)?.title}}</div>
+<div>{{(loading$ | async) ? 'Loading ...' : ''}}</div>
